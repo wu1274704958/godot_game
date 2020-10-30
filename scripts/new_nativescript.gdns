@@ -1,0 +1,17 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[sub_resource type="GDNativeLibrary" id=1]
+resource_local_to_scene = true
+load_once = false
+entry/Android.armeabi-v7a = "res://scripts/bin/libtest_armv7a.so"
+entry/Android.arm64-v8a = "res://scripts/bin/libtest_arm64v8.so"
+entry/Windows.64 = "res://scripts/bin/libtest.dll"
+entry/Windows.32 = "res://scripts/bin/libtest.32.dll"
+dependency/Android.armeabi-v7a = [  ]
+dependency/Android.arm64-v8a = [  ]
+dependency/Windows.64 = [  ]
+dependency/Windows.32 = [  ]
+
+[resource]
+class_name = "RotateSimple"
+library = SubResource( 1 )
