@@ -7,10 +7,10 @@ reloadable=true
 
 [entry]
 
-Android.armeabi-v7a="res://scripts/bin/libtest_armv7a.so"
-Android.arm64-v8a="res://scripts/bin/libtest_arm64v8.so"
-Windows.64="res://scripts/bin/libtest.dll"
-Windows.32="res://scripts/bin/libtest.32.dll"
+Android.armeabi-v7a="res://scripts/bin/libtest.android.release.armv7.so"
+Android.arm64-v8a="res://scripts/bin/libtest.android.release.arm64v8.so"
+Windows.64="res://scripts/bin/libtest.windows.release.64.dll"
+Windows.32="res://scripts/bin/libtest.windows.release.32.dll"
 
 [dependencies]
 
