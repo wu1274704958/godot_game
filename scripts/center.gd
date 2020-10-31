@@ -8,7 +8,7 @@ extends Control
 
 func center_horiz():
 	self.rect_pivot_offset = Vector2(self.get_size().x/2,self.get_size().y / 2);
-	self.rect_position.x = (get_parent().get_size().x - get_size().x) / 2;
+	self.rect_position.x = (get_parent().get_size().x * get_parent().rect_scale.x - get_size().x) / 2;
 	pass
 
 

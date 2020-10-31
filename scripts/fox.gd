@@ -18,10 +18,12 @@ var dir = 1;
 func _ready():
 	print("fox ready!")
 	le = get_parent().get_node(("LineEdit"));
-	bx = le.get_rect().position.x;
+	
 	by = le.get_rect().position.y;
-	e = bx + le.get_rect().size.x;
+	
 	offset_ = Vector2(get_rect().size.x / 2,get_rect().size.y / -2);
+	bx = le.get_rect().position.x + offset_.x;
+	e = le.get_rect().position.x + le.get_rect().size.x - offset_.x;
 	set_pos(bx,by)
 	pass # Replace with function body.
 	
