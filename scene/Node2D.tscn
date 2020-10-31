@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://fonts/happy.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/begin.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://anim/2d_animation_player-run.png" type="Texture" id=8]
 [ext_resource path="res://scripts/fox.gd" type="Script" id=9]
+[ext_resource path="res://scripts/CreateCube.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -36,9 +37,9 @@ anchor_left = -0.35625
 anchor_top = 0.15
 anchor_right = -0.35625
 anchor_bottom = 0.15
-margin_left = 1037.0
+margin_left = 717.0
 margin_top = 297.004
-margin_right = 1795.0
+margin_right = 1475.0
 margin_bottom = 385.004
 rect_pivot_offset = Vector2( 379, 44 )
 theme = ExtResource( 6 )
@@ -69,8 +70,25 @@ position = Vector2( 460.811, 191.817 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
-[node name="Sprite2" type="Sprite" parent="ViewportContainer"]
+[node name="fox" type="Sprite" parent="ViewportContainer"]
 position = Vector2( 155.407, 174.861 )
 texture = ExtResource( 8 )
 hframes = 6
 script = ExtResource( 9 )
+
+[node name="texture3d" type="Sprite" parent="ViewportContainer"]
+position = Vector2( 863.663, 476.284 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 300, 300 )
+transparent_bg = true
+
+[node name="Camera" type="Camera" parent="Viewport"]
+transform = Transform( 0.998924, 0.0183763, -0.0425699, 0.00131646, 0.9065, 0.422204, 0.0463482, -0.421806, 0.905501, 0.168619, 2.14331, 3.76757 )
+fov = 66.6453
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Viewport"]
+transform = Transform( 0.835146, 0.23004, -0.499614, 0, 0.90834, 0.418232, 0.550029, -0.349284, 0.758596, -2.48243, 2.87446, 2.53229 )
+
+[node name="Node" type="Node" parent="Viewport"]
+script = ExtResource( 11 )

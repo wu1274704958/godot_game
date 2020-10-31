@@ -46,7 +46,7 @@ func _process(delta):
 		if(frame >= hframes - 1):
 			frame = 0;
 		frame += 1;
-		print("frame = " + str(frame))
+		#print("frame = " + str(frame))
 	position.x += dir * move_speed;
 	
 	pass
