@@ -22,5 +22,5 @@ config/icon="res://icon.png"
 [display]
 
 window/size/resizable=false
-window/size/test_width=1547
-window/size/test_height=894
+window/size/test_width=1024
+window/size/test_height=600
