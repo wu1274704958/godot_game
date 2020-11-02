@@ -100,4 +100,4 @@ light_energy = 0.14
 omni_range = 2.0
 
 [node name="Camera" type="Camera" parent="Viewport"]
-transform = Transform( 1, 0, 0, 0, 0.900266, 0.435341, 0, -0.435341, 0.900266, 0, 5.23959, 7.04375 )
+transform = Transform( 1, 0, 0, 0, 0.900266, 0.435341, 0, -0.435341, 0.900266, 0, 7.46623, 11.4755 )
