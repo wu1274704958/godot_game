@@ -20,6 +20,8 @@ func _ready():
 	pass # Replace with function body.
 
 func init_texture_3d():
+	sprite.position.x = get_size().x / 2;
+	sprite.position.y = get_size().y / 2;
 	sprite.texture = viewport.get_texture()
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
