@@ -19,8 +19,19 @@ config/name="first"
 run/main_scene="res://scene/Node2D.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/size/resizable=false
 window/size/test_width=1024
 window/size/test_height=600
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+gles2/compatibility/disable_half_float=true
+gles2/compatibility/enable_high_float.Android=true
