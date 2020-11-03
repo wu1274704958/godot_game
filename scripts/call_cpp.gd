@@ -15,13 +15,14 @@ onready var cpp_node = $".."
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("GDNode ready")
+	translate(Vector3(0,1,0))
 	#test_call()
 	create_tree()
 	pass # Replace with function body.
 
 
 func test_call():
-	translate(Vector3(0,1,0))
+	
 	var y = 0;
 	#call cpp function
 	var m:MeshInstance = cpp_node.call("create_cube",6,30,4,27,24,0) 
