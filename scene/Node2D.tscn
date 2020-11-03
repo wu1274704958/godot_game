@@ -82,8 +82,9 @@ hframes = 6
 script = ExtResource( 9 )
 
 [node name="Viewport" type="Viewport" parent="."]
-size = Vector2( 1920, 1080 )
+size = Vector2( 1000, 1000 )
 transparent_bg = true
+keep_3d_linear = true
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Viewport"]
 transform = Transform( 0.980038, 0.0947414, -0.174783, 0.0324871, 0.791016, 0.610933, 0.196136, -0.604416, 0.772148, -1.47162, 3.71557, 5.43337 )
