@@ -25,45 +25,29 @@ func test_call():
 	
 	var y = 0;
 	#call cpp function
-	var m:MeshInstance = cpp_node.call("create_cube",6,30,4,27,24,0) 
+	var m:MeshInstance = cpp_node.call("create_cube",6,30,4,27,24,0)
 	m.translation.y = y;
 	y += 1;
 	add_child(m)
 	pass
 
 func create_tree():
-	var y = 0;
+	var y = 1;
 	
 	for i in range(6):
-		var m:MeshInstance = cpp_node.call("create_cube",12,30,12,30,12,12) 
-		m.translation.y = y;
-		y += 1;
-		add_child(m)
+		var ok = cpp_node.call("add_voxel",16,Vector3(0,y,0))
+		y += 1
 	pass
 	
-	var m:MeshInstance = cpp_node.call("create_cube",26,26,26,26,26,26)
-	m.translation.y = y;
-	add_child(m)
+	var ok = cpp_node.call("add_voxel",8,Vector3(0,y,0))
 	
-	var m2:MeshInstance = cpp_node.call("create_cube",26,26,26,26,26,26)
-	m2.translation.y = y - 1;
-	m2.translation.x = 1;
-	add_child(m2)
+	ok = cpp_node.call("add_voxel",8,Vector3(1,y - 1,0))
 	
-	var m3:MeshInstance = cpp_node.call("create_cube",26,26,26,26,26,26)
-	m3.translation.y = y - 1;
-	m3.translation.x = -1;
-	add_child(m3)
+	ok = cpp_node.call("add_voxel",8,Vector3(-1,y - 1,0))
 	
-	var m4:MeshInstance = cpp_node.call("create_cube",26,26,26,26,26,26)
-	m4.translation.y = y - 1;
-	m4.translation.z = -1;
-	add_child(m4)
+	ok = cpp_node.call("add_voxel",8,Vector3(0,y - 1,-1))
 	
-	var m5:MeshInstance = cpp_node.call("create_cube",26,26,26,26,26,26)
-	m5.translation.y = y - 1;
-	m5.translation.z = 1;
-	add_child(m5)
+	ok = cpp_node.call("add_voxel",8,Vector3(0,y - 1,1))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
