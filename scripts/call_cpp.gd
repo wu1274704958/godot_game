@@ -35,19 +35,19 @@ func create_tree():
 	var y = 1;
 	
 	for i in range(6):
-		var ok = cpp_node.call("add_voxel",16,Vector3(0,y,0))
+		var ok = cpp_node.call("add_voxel",51,Vector3(0,y,0))
 		y += 1
 	pass
 	
-	var ok = cpp_node.call("add_voxel",8,Vector3(0,y,0))
+	var ok = cpp_node.call("add_voxel",16,Vector3(0,y,0))
 	
-	ok = cpp_node.call("add_voxel",8,Vector3(1,y - 1,0))
+	ok = cpp_node.call("add_voxel",16,Vector3(1,y - 1,0))
 	
-	ok = cpp_node.call("add_voxel",8,Vector3(-1,y - 1,0))
+	ok = cpp_node.call("add_voxel",16,Vector3(-1,y - 1,0))
 	
-	ok = cpp_node.call("add_voxel",8,Vector3(0,y - 1,-1))
+	ok = cpp_node.call("add_voxel",16,Vector3(0,y - 1,-1))
 	
-	ok = cpp_node.call("add_voxel",8,Vector3(0,y - 1,1))
+	ok = cpp_node.call("add_voxel",16,Vector3(0,y - 1,1))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
